@@ -23,16 +23,23 @@ La aplicación resuelve de forma automatizada los conflictos típicos entre la c
 
 ---
 
-🛠️ Requisitos e Instalación de Dependencias
+## 🛠️ Requisitos e Instalación de Dependencias
+
 El script requiere Python 3 y las librerías gráficas de PyQt5 junto con el tema oscuro. Podés instalarlas corriendo el siguiente comando en tu terminal:
 
+```
 Bash
 pip install PyQt5 qdarkstyle
-📂 ¿Cómo funciona bajo el capó?
+```
+
+## 📂 ¿Cómo funciona bajo el capó?
+
 Ruta Destino: La aplicación centraliza todo en el directorio estándar de fuentes del usuario:
 
+```
 Bash
 ~/.local/share/fonts/
+```
 Si la carpeta no existe, el script la crea de forma automática en el primer arranque.
 
 Estructura del Proyecto: El motor recorre de forma recursiva cada subcarpeta para poblar la base de datos interna. Podés estructurar tus fuentes así:
@@ -44,12 +51,17 @@ Plaintext
 │   └── Orbitron-Bold.ttf
 └── Tipografias_Personalizadas/
     └── MiFuente-XXL.otf
-💻 Uso
+
+## 💻 Uso
+
 Dale permisos de ejecución al script y lanzalo desde tu terminal:
 
+```
 Bash
 chmod +x fontgecko.py
 ./fontgecko.py
+```
+
 Para Buscar: Solo empezá a escribir en el cuadro superior de búsqueda (coincidencia parcial de caracteres).
 
 Para Instalar: Hacé clic en el botón verde "Instalar Nueva Fuente (.ttf/.otf)", seleccioná tu archivo descargado, y FontGecko se encargará de copiarlo, indexarlo recursivamente, refrescar la "grifería" del sistema (fc-cache) y seleccionártelo automáticamente en pantalla.
