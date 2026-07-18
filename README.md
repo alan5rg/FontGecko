@@ -74,7 +74,7 @@ chmod +x fontgecko.py
 ---
 
 ## 📜 Licencia y Créditos
-* Desarrollado por: Alan / Eidos (EI2).
+* Desarrollado por: Alan / Eidos (EI2) [Team CAngurera].
 
 * Framework Gráfico: PyQt5.
 
