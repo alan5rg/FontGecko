@@ -1,0 +1,57 @@
+FontGecko Selector v.3.0
+FontGecko Selector es una utilidad ágil y brutal diseñada para sistemas basados en Linux (como Xubuntu, Ubuntu y derivados) que permite previsualizar, buscar e instalar fuentes tipográficas (.ttf / .otf) en caliente.
+
+La aplicación resuelve de forma automatizada los conflictos típicos entre la caché del sistema (Fontconfig) y las aplicaciones basadas en Qt5, garantizando que cualquier fuente nueva se pueda usar de inmediato en tu entorno de desarrollo y software de diseño (como GIMP, Inkscape, etc.) sin necesidad de reiniciar la sesión ni el programa.
+
+🚀 Características Clave
+Inyección en Caliente (Hot Loading): Registra e inyecta dinámicamente las fuentes en la sesión actual de la app utilizando QFontDatabase.addApplicationFont().
+
+Escaneo Supremo Recursivo: Al iniciar, camina de manera inteligente (os.walk()) por todo tu directorio de fuentes de usuario, permitiendo organizar tus tipografías por subcarpetas (ej: por familias, estilos como Patagonia Slim o XXL) de forma ordenada.
+
+Inmunidad a Fuentes Variables: Filtra automáticamente los archivos conflictivos del tipo VariableFont que suelen romper o marear la indexación nativa de Qt5.
+
+Buscador Brutal Integrado: Filtrado predictivo y parcial en tiempo real. Escribís cualquier fragmento del nombre y la lista se limpia al milisegundo.
+
+Sincronización Global Automatizada: Ejecuta fc-cache -f en segundo plano al instalar, haciendo que el resto del sistema operativo reconozca el nuevo archivo inmediatamente.
+
+Interfaz Cyberpunk Organizada: Estilo oscuro integrado gracias a qdarkstyle, con acentos verde neón ideales para la lectura del Oráculo.
+
+🛠️ Requisitos e Instalación de Dependencias
+El script requiere Python 3 y las librerías gráficas de PyQt5 junto con el tema oscuro. Podés instalarlas corriendo el siguiente comando en tu terminal:
+
+Bash
+pip install PyQt5 qdarkstyle
+📂 ¿Cómo funciona bajo el capó?
+Ruta Destino: La aplicación centraliza todo en el directorio estándar de fuentes del usuario:
+
+Bash
+~/.local/share/fonts/
+Si la carpeta no existe, el script la crea de forma automática en el primer arranque.
+
+Estructura del Proyecto: El motor recorre de forma recursiva cada subcarpeta para poblar la base de datos interna. Podés estructurar tus fuentes así:
+
+Plaintext
+~/.local/share/fonts/
+├── Orbitron/
+│   ├── Orbitron-Regular.ttf
+│   └── Orbitron-Bold.ttf
+└── Tipografias_Personalizadas/
+    └── MiFuente-XXL.otf
+💻 Uso
+Dale permisos de ejecución al script y lanzalo desde tu terminal:
+
+Bash
+chmod +x fontgecko.py
+./fontgecko.py
+Para Buscar: Solo empezá a escribir en el cuadro superior de búsqueda (coincidencia parcial de caracteres).
+
+Para Instalar: Hacé clic en el botón verde "Instalar Nueva Fuente (.ttf/.otf)", seleccioná tu archivo descargado, y FontGecko se encargará de copiarlo, indexarlo recursivamente, refrescar la "grifería" del sistema (fc-cache) y seleccionártelo automáticamente en pantalla.
+
+📜 Licencia y Créditos
+Desarrollado por: Alan / Eidos (EI2).
+
+Framework Gráfico: PyQt5.
+
+Estilo Visual: QDarkStyle (MIT License).
+
+"Porque Gecko no es solo un OS, Gecko es Oráculo."
