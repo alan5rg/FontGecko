@@ -1,7 +1,7 @@
 # FontGecko Selector v.3.0
 FontGecko Selector es una utilidad ágil y brutal diseñada para sistemas basados en Linux (como Xubuntu, Ubuntu y derivados) que permite previsualizar, buscar e instalar fuentes tipográficas (.ttf / .otf) en caliente.
 
-> *"El minimalismo no es la ausencia de código, es la presencia de la lógica exacta."* 
+> *"El minimalismo no es la ausencia de código, es la presencia de la lógica exacta."*
 
 [![Python v3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![PyQt5](https://img.shields.io/badge/UI-PyQt5-green.svg)](https://pypi.org/project/PyQt5/)
