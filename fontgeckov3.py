@@ -3,7 +3,7 @@ import sys
 import os
 import shutil
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QListWidget, QLabel, QSplitter, QPushButton, QFileDialog, QLineEdit
-from PyQt5.QtGui import QFontDatabase, QFont
+from PyQt5.QtGui import QFontDatabase, QFont, QIcon
 from PyQt5.QtCore import Qt
 
 import qdarkstyle #MIT Dark Style
@@ -23,6 +23,12 @@ class FontGecko(QWidget):
         super().__init__()
         self.setWindowTitle(f"FontGecko {geckoappversion}")
         self.setGeometry(100, 100, 800, 600)
+
+        self.scriptDir = os.path.dirname (os.path.realpath(__file__ ))
+        self.IconPath = os.path.join(self.scriptDir ,'Icons')
+        icon_file = os.path.join(self.IconPath ,'fontgecko.png')
+        if os.path.exists(icon_file ):
+            self.setWindowIcon(QIcon(icon_file ))
 
         # Definir la ruta correcta de fuentes de usuario en Linux
         self.user_fonts_dir = os.path.expanduser("~/.local/share/fonts")
