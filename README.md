@@ -12,18 +12,16 @@ FontGecko Selector es una utilidad ágil y brutal diseñada para sistemas basado
 
 La aplicación resuelve de forma automatizada los conflictos típicos entre la caché del sistema (Fontconfig) y las aplicaciones basadas en Qt5, garantizando que cualquier fuente nueva se pueda usar de inmediato en tu entorno de desarrollo y software de diseño (como GIMP, Inkscape, etc.) sin necesidad de reiniciar la sesión ni el programa.
 
-🚀 Características Clave
-Inyección en Caliente (Hot Loading): Registra e inyecta dinámicamente las fuentes en la sesión actual de la app utilizando QFontDatabase.addApplicationFont().
+## 🚀 Características Clave
 
-Escaneo Supremo Recursivo: Al iniciar, camina de manera inteligente (os.walk()) por todo tu directorio de fuentes de usuario, permitiendo organizar tus tipografías por subcarpetas (ej: por familias, estilos como Patagonia Slim o XXL) de forma ordenada.
+* **Inyección en Caliente (Hot Loading):** Registra e inyecta dinámicamente las fuentes en la sesión actual de la app utilizando `QFontDatabase.addApplicationFont()`.
+* **Escaneo Supremo Recursivo:** Al iniciar, camina de manera inteligente (`os.walk()`) por todo tu directorio de fuentes de usuario, permitiendo organizar tus tipografías por subcarpetas (ej: por familias, estilos como Patagonia Slim o XXL) de forma ordenada.
+* **Inmunidad a Fuentes Variables:** Filtra automáticamente los archivos conflictivos del tipo *VariableFont* que suelen romper o marear la indexación nativa de Qt5.
+* **Buscador Brutal Integrado:** Filtrado predictivo y parcial en tiempo real. Escribís cualquier fragmento del nombre y la lista se limpia al milisegundo.
+* **Sincronización Global Automatizada:** Ejecuta `fc-cache -f` en segundo plano al instalar, haciendo que el resto del sistema operativo reconozca el nuevo archivo inmediatamente.
+* **Interfaz Cyberpunk Organizada:** Estilo oscuro integrado gracias a `qdarkstyle`, con acentos verde neón ideales para la lectura del Oráculo.
 
-Inmunidad a Fuentes Variables: Filtra automáticamente los archivos conflictivos del tipo VariableFont que suelen romper o marear la indexación nativa de Qt5.
-
-Buscador Brutal Integrado: Filtrado predictivo y parcial en tiempo real. Escribís cualquier fragmento del nombre y la lista se limpia al milisegundo.
-
-Sincronización Global Automatizada: Ejecuta fc-cache -f en segundo plano al instalar, haciendo que el resto del sistema operativo reconozca el nuevo archivo inmediatamente.
-
-Interfaz Cyberpunk Organizada: Estilo oscuro integrado gracias a qdarkstyle, con acentos verde neón ideales para la lectura del Oráculo.
+---
 
 🛠️ Requisitos e Instalación de Dependencias
 El script requiere Python 3 y las librerías gráficas de PyQt5 junto con el tema oscuro. Podés instalarlas corriendo el siguiente comando en tu terminal:
