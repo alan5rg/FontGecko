@@ -27,8 +27,7 @@ La aplicación resuelve de forma automatizada los conflictos típicos entre la c
 
 El script requiere Python 3 y las librerías gráficas de PyQt5 junto con el tema oscuro. Podés instalarlas corriendo el siguiente comando en tu terminal:
 
-```
-Bash
+```Bash
 pip install PyQt5 qdarkstyle
 ```
 
@@ -36,8 +35,7 @@ pip install PyQt5 qdarkstyle
 
 Ruta Destino: La aplicación centraliza todo en el directorio estándar de fuentes del usuario:
 
-```
-Bash
+```Bash
 ~/.local/share/fonts/
 ```
 Si la carpeta no existe, el script la crea de forma automática en el primer arranque.
