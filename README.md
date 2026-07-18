@@ -67,17 +67,17 @@ chmod +x fontgecko.py
 ./fontgecko.py
 ```
 
-Para Buscar: Solo empezá a escribir en el cuadro superior de búsqueda (coincidencia parcial de caracteres).
+* **Para Buscar: Solo empezá a escribir en el cuadro superior de búsqueda (coincidencia parcial de caracteres).
 
-Para Instalar: Hacé clic en el botón verde "Instalar Nueva Fuente (.ttf/.otf)", seleccioná tu archivo descargado, y FontGecko se encargará de copiarlo, indexarlo recursivamente, refrescar la "grifería" del sistema (fc-cache) y seleccionártelo automáticamente en pantalla.
+* **Para Instalar: Hacé clic en el botón verde "Instalar Nueva Fuente (.ttf/.otf)", seleccioná tu archivo descargado, y FontGecko se encargará de copiarlo, indexarlo recursivamente, refrescar la "grifería" del sistema (fc-cache) y seleccionártelo automáticamente en pantalla.
 
 ---
 
 ## 📜 Licencia y Créditos
-Desarrollado por: Alan / Eidos (EI2).
+* **Desarrollado por: Alan / Eidos (EI2).
 
-Framework Gráfico: PyQt5.
+* **Framework Gráfico: PyQt5.
 
-Estilo Visual: QDarkStyle (MIT License).
+* **Estilo Visual: QDarkStyle (MIT License).
 
 "Porque Gecko no es solo un OS, Gecko es Oráculo."
